@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* This is where we can fix the height of the background */
+.wrapper-head{
+  min-height: 80vh;
+  background: url(images/background.png) no-repeat center;
+  background-size: cover;
+}
+
+not-main
+{
+  min-height: 40vh;
+  background: url(images/background.png) no-repeat center;
+  background-size: cover;
+}
+.wrapper-head .navbar{
+  width: 85%;
+  height: 15;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Used for the Watch Video Button */
+button {
+  color: #fbfcfd;
+  padding: 10px 25px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius:  20px;
+  cursor: pointer;
+}
+
+.content-head {
+  color: #fbfcfd;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.content-head h1{
+  font-size: 50px;
+  margin: 10px 0 30px;
+  line-height: 50px;
+}
+
+ .content-head p {
+  font-size: 15px;
+  margin: 10px 0 30px;
+  line-height: 30px;
+}
+
+/* This is for the pop up menu */
+ul {
+  list-style-type: none;
+}
+
+.container-menu, .container-inner {
+  margin: 20px auto;
+  width: 100%;
+}
+
+.container-menu{
+max-width: 1350px;
+position: relative;
+display: grid;
+grid-template-columns: 1fr 5fr 1fr;
+justify-content: space-between;
+align-items: center;
+margin: 0 auto;
+}
+
+.container-inner {
+  max-width: 1000px;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em;
+  z-index: 9;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.brand {
+  font-size: 2em;
+}
+
+nav .container-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav .container-inner ul{
+  width: 100%;
+  margin: 0 1em;
+}
+
+nav .container ul:nth-child(2) {
+  text-align: right;
+}
+
+nav .container-inner ul li {
+  display: inline-block;
+  margin: 0 .7em;
+}
+
+nav a {
+ text-decoration: none;
+ font-size: 0.9em;
+ transition: 0.3s;
+ font-weight: 600;
+ color: #fff;
+ text-transform: capitalize;
+}
+
+nav a:hover {
+color: #14C6AE;
+}
+
+.input-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em, 0;
+}
+
+form input,
+form button {
+  background: none;
+  border:none;
+  color: #fff;
+}
+
+form button{
+  cursor: pointer;
+}
+
+form input::placeholder {
+  color: #fff;
+}
+
+form input:focus {
+  outline: none;
+}
+
+nav .fa-bars {
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: right;
+}
+
+nav .fa-bars:hover {
+  color : #e54416;
+}
+
+/* Here we can chage how the Dropdown changes */
+.menu {
+  background: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3em;
+  height: 0;
+  opacity: 0;
+  transition: 0.7s
+  cubic-bezier(
+    .74,-.03,.83,.67
+    );
+    overflow-y: hidden;
+}
+
+.logo {
+  width: 6em;
+}
+
+.menu ul, .menu form{
+margin: 1em auto;
+}
+
+.menu li {
+  margin: 1em 0;
+}
+
+.menu > div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 6em 1em 3em 1em;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.menu > div::-webkit-scrollbar {
+  display: none;
+}
+
+.menu .social-media {
+  margin: 2em 0;
+}
+
+.social-media li{
+display: inline-block;
+margin: 0 0.5em;
+
+}
+
+/* java classes  */
+.menu-open {
+  height: 100vh;
+  opacity: 1;
+}
+
+.navbar-active {
+  background: #111;
+  padding: 1em;
+}
+
+@media screen and (max-width: 800px) {
+  nav .container-inner {
+    display: none;
+  }
+  nav .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width:800px) {
+  .menu form {
+    display: none;
+  }
+}
+
+@media screen and (max-width:400px) {
+ html {
+   font-size: 13px;
+ }
+}
+
+
+/* Footer Making */
+.footer-wrapper {
+  line-height: 1.5;
+  font-family: font-family: 'Poppins', sans-serif;
+}
+
+.footer-wrapper .container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer-wrapper {
+  background: #24262b;
+  padding: 30px 0;
+}
+
+.footer-col{
+   width: 25%;
+   padding: 10px 15px;
+}
+
+.footer-col {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul:nth-child(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+
+.footer-col ul li a:hover {
+  color: #fffff;
+  padding: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+color: #24262b;
+background-color: #ffffff;
+}
+
+/* @responsive  */
+@media(max-width: 767px){
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 574px){
+  .footer-col {
+    width: 100%;
+  }
+}
+
+
+
+/* Making Main  */
+
+/* This will get the display side by side */
+.container-main {
+  display: flex;
+  justify-content: center;
+  background-image: url(images/background.png);
+  background-size: cover;
+  flex-wrap: wrap;
+}
+
+.card{
+    background: #D3D3D3;
+  width: 300px;
+  margin: 30px;
+  border-radius: 15px;
+  border-width: thick;
+}
+
+
+.card-image{
+
+  height: 300px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.car-1{
+  background-image: url(images/working.jpg);
+}
+
+.car-2{
+  background-image: url(images/working.jpg);
+}
+
+.car-3{
+  background-image: url(images/working.jpg);
+}
+
+
+.card h2 {
+  padding: 10px;
+  text-align: center;
+}
+
+.card p{
+  padding: 10px;
+  line-height: 20px;
+}
+
+.card:hover {
+  background-color: rgb(62,62,62);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+}

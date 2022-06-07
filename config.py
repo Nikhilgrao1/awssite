@@ -1,0 +1,6 @@
+customhost = "uploaddatabase.cmi7k84twi7t.us-east-1.rds.amazonaws.com"
+customuser = "nikhil"
+custompass = "TFjune2022"
+customdb = "employee"
+custombucket = "adddatas"
+customregion = "us-east-1"
